@@ -1,12 +1,22 @@
 import csv
-from productos.ropa import Ropa
+from productos import *
+
 
 class Importador():
     @classmethod
     def importar(cls, ruta : str):
-        with open(ruta, newline="") as archivo:
+        with open(ruta, newline="", encoding="utf-8") as archivo:
+            ### DictReader: Salida Diccionario
+            ### reader    : Salida formato lista
             info = csv.DictReader(archivo)
-            
+            for fila in info:
+                print(fila)  # O realiza alguna operación con cada fila
+        #with open(ruta, newline="", encoding="utf-8") as archivo:
+        #    info = csv.reader(archivo)
+        #    for fila in info:
+        #        print(fila)  # O realiza alguna operación con cada fila
+
 
 if __name__ == "__main__":
-    Importador("ropa.csv")
+    #Importador.importar("ropa.csv")
+    Importador.importar("accesorios.csv")

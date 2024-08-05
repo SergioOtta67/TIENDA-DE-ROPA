@@ -1,3 +1,3 @@
 #main Tienda de Ropa y Accesorios
-from producto import *
+from productos.producto import *
 import csv
