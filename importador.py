@@ -18,5 +18,8 @@ class Importador():
 
 
 if __name__ == "__main__":
-    #Importador.importar("ropa.csv")
+    print("Listado de Ropa")
+    Importador.importar("ropa.csv")
+    print("\n")
+    print("Listado de Accesorios")
     Importador.importar("accesorios.csv")
