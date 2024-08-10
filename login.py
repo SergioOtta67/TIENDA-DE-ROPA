@@ -67,7 +67,7 @@ if __name__ == "__main__":
         print ("\n"*8)
         print(f"Bienvenido {usuario}\n")
         if ventas and agregar:
-            lista = ["Ver Prendas c/stock", "Ver Accesorios c/stock", "Realizar Ventas", "Agregar Articulos\n", "Salir\n"]
+            lista = ["Ver Prendas c/stock", "Ver Accesorios c/stock", "Realizar Ventas", "Agregar Articulos", "Cambiar Permisos\n", "Salir\n"]
         elif ventas and (not agregar):
             lista = ["Ver Prendas c/stock", "Ver Accesorios c/stock", "Realizar Ventas\n", "Salir\n"]
         else:
