@@ -10,6 +10,6 @@ class Material(Producto):
         super().__init__(codigo, precio, stock, descripcion)
         self.__material = material
     
-    def get_material(self) -> str:
+    def get_material(self):
         return self.__material
 

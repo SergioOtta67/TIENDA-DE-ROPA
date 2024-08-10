@@ -20,3 +20,11 @@ class Producto():
 
     def get_descripcion(self) -> str:
         return self.__descripcion
+    
+    def get_info(self):
+        return {
+                "Codigo"      : self.__codigo,
+                "Precio"      : self.__precio,
+                "Stock"       : self.__stock,
+                "Descripcion" : self.__descripcion
+                }
