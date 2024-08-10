@@ -1,6 +1,7 @@
 import csv
-from productos import *
-
+from productos.ropa import Ropa
+from productos.accesorio import Accesorio
+#from .productos.producto import Producto
 class Importador():
     @classmethod
     def importar(cls, ruta : str):
@@ -20,13 +21,13 @@ class Importador():
                     lista.append(Ropa(codigo, talle, genero, precio, stock, descripcion))
                 elif "Material" in linea.keys():
                     material = linea.get("Material")
-                    lista.append(Material(codigo, precio, stock, descripcion, material))
+                    lista.append(Accesorio(codigo, material, precio, stock, descripcion))
         return lista
 
 
 if __name__ == "__main__":
     articulos = []
     articulos = Importador.importar("./csv/ropa.csv")
-    articulos.append(Importador.importar("./csv/accesorios.csv"))
+    articulos.extend(Importador.importar("./csv/accesorios.csv"))
     for arti in articulos:
         print(arti.get_info())

@@ -104,53 +104,6 @@ def leer_1(mensaje : str, tipo : int) -> str:
 
     return entrada
 
-def ingreso_empleado(id):
-    nombre  = ""
-    edad    = 0
-    sexo    = ""
-    dni     = 0
-    trabaja = 9
-    confirma = "N"
-    largomax = 15
-    while len(nombre)==0 or len(nombre) > largomax:
-        nombre  =     leer("Nombre   : ", 2)
-        if len(nombre)>largomax:
-            nombre = nombre[:largomax]
-            print(f"El nombre quedará : {nombre}")
-            confirma = ""
-            while confirma != "N" and confirma != "S":
-                confirma = leer("Confirma cortar el nombre ? S=SI N=NO : ", 1)
-            if confirma == "N":
-                nombre = ""
-    while edad < 1 or edad > 120:
-        edad    = leer("Edad     : ", 1)
-    while sexo != "Masculino" and sexo != "Femenino":
-        sexo    =     leer("Sexo     : ", 2)
-        if sexo=="M":
-            sexo = "Masculino"
-        elif sexo == "F":
-            sexo = "Femenino"
-
-    sexo    = True if sexo == "Masculino" else False
-    while dni <= 0 or dni >= 99000000:
-        dni     = leer("D.N.I.   : ", 1)
-
-    while trabaja < 0 or trabaja > 1:
-        trabaja = input("Trabaja 0=NO 1=SI : ")
-        if trabaja.isdigit():
-            trabaja = int(trabaja)
-        else:
-            trabaja = 9
-            print("Valor inválido")
-    trabaja = bool(trabaja)
-    sueldo = 0.0
-    if trabaja:
-        while sueldo <= 0:
-            sueldo = leer("Sueldo   : ", 3)
-
-    agregar_empleado = { id : (nombre, edad, sexo, dni, trabaja, sueldo) }
-    return agregar_empleado
-
 def formatear_id(id : str, largo : int) -> str:
     texto = "0"*3+id
     salida = texto[-largo:]

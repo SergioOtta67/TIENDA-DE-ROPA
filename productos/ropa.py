@@ -1,4 +1,4 @@
-from producto import Producto
+from .producto import Producto
 class Ropa(Producto):
     def __init__(
                 self, codigo: str,
@@ -44,7 +44,12 @@ class Ropa(Producto):
             print(f"No es valido el valor pasado\nLos valores validos son {self.__lista_generos}")
     
     def get_info(self):
-        return super().get_info()
+        info = super().get_info()
+        info.update({
+                        "Talle" : self.__talle,
+                        "Genero" : self.__genero
+                    })
+        return info
             
 if __name__ == "__main__":
     ropa = Ropa("023","XL","Masculino")
