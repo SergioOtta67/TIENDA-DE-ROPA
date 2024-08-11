@@ -50,6 +50,7 @@ class Ropa(Producto):
                         "Genero" : self.__genero
                     })
         return info
-            
+
+
 if __name__ == "__main__":
     ropa = Ropa("023","XL","Masculino")
