@@ -1,4 +1,4 @@
-Usuario,Password,Ventas,Agregar
-Admin,Root24,1,1
-Operador1,Opera91,1,0
-Operador2,Usua2B,0,0
+Usuario,Password,Ventas,Agregar,CambiarPermisos,ModificarStock
+Admin,Root24,1,1,1,1
+Operador1,Opera91,1,0,0,0
+Operador2,Usua2B,0,0,0,0
