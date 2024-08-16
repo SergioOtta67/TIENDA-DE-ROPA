@@ -146,6 +146,10 @@ if __name__ == "__main__":
                 else:
                     sigue = int(codigo_accesorios) + 1
                 print (f"Siguiente a Incorporar   = {sigue}\n")
+            elif opc==5 and modificar_stock:
+                pass
+            elif opc==6 and cambiar_permisos:
+                pass
 
             else:
                 print("La opcion es incorrecta")
